@@ -1,3 +1,5 @@
+#BFS -> LIFO -> explores wide -> shortest path os on an unweighted graph
+
 def bfs(graph, start, goal):
     frontier = [start]
     visited = {start}

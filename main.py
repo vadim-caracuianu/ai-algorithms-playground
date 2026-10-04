@@ -1,5 +1,5 @@
-from search.bfs import bfs
-
+#from search.bfs import bfs
+from search.dfs import dfs
 
 graph = {
     "A": ["B", "C"],
@@ -10,7 +10,8 @@ graph = {
     "F": []
 }
 
-path = bfs(graph, "A", "F")
+#path = bfs(graph, "A", "F")
+path = dfs(graph, "A", "F")
 
 print(path)
 
