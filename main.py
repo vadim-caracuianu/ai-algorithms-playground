@@ -1,30 +1,31 @@
 #from search.bfs import bfs
 #from search.dfs import dfs
 #from search.ucs import ucs
-from search.greedy import greedy
+#from search.greedy import greedy
+from search.astar import astar
 
 #For bfs, dfs, greedy only
-graph = {
-    "A": ["B", "C"],
-    "B": ["D"],
-    "C": ["E"],
-    "D": ["F"],
-    "E": ["F"],
-    "F": []
-}
+# graph = {
+#     "A": ["B", "C"],
+#     "B": ["D"],
+#     "C": ["E"],
+#     "D": ["F"],
+#     "E": ["F"],
+#     "F": []
+# }
 
 #path = bfs(graph, "A", "F")
 #path = dfs(graph, "A", "F")
 
-#For ucs only
-#weighted_graph = {
-#     "A": [("B", 4), ("C", 2)],
-#     "B": [("D", 5)],
-#     "C": [("E", 3)],
-#     "D": [("F", 2)],
-#     "E": [("F", 1)],
-#     "F": []
-# }
+#For ucs and astar only
+weighted_graph = {
+     "A": [("B", 4), ("C", 2)],
+     "B": [("D", 5)],
+     "C": [("E", 3)],
+     "D": [("F", 2)],
+     "E": [("F", 1)],
+     "F": []
+ }
 
 #path = ucs(weighted_graph, "A", "F")
 
@@ -37,6 +38,6 @@ heuristic = {
     "F": 0
 }
 
-path = greedy(graph, heuristic, "A", "F")
+path = astar(weighted_graph, heuristic, "A", "F")
 print(path)
 
